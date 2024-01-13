@@ -1,4 +1,9 @@
-{% extends 'base.html' %} {% block title %}Home{% endblock %} {% load static %} {% block content %}
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% load static %}
+
+{% block content %}
 <!-- Main Section Start -->
 <div class="main-section">
     <!-- Home Pages Elements Strat -->
@@ -18,7 +23,7 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                     <div class="main-search fancy bg-holder">
-                        <form action="{% url 'search' %}" method="GET">
+                        <form action="" method="GET">
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
                                     <div class="field-holder">
@@ -115,12 +120,14 @@
                                 <div class="list-post featured">
                                     <div class="img-holder">
                                         <figure>
-                                            <a href="{% url 'vendorDetail' vendor.vendor_slug %}"> {% if
-                                                vendor.user_profile.profile_picture %} <img
-                                                    src="{{ vendor.user_profile.profile_picture.url }}"
-                                                    class="img-thumb wp-post-image" alt=""> {% else %} <img
-                                                    src="{% static 'images/blank-profile-pic.jpg' %}"
-                                                    class="img-thumb wp-post-image" alt=""> {% endif %} </a>
+                                            <a href="{% url 'vendorDetail' vendor.vendor_slug %}">
+                                                {% if vendor.user_profile.profile_picture %}
+                                                <img src="{{ vendor.user_profile.profile_picture.url }}"
+                                                    class="img-thumb wp-post-image" alt="">
+                                                {% else %}
+                                                <img src="{% static 'images/blank-profile-pic.jpg' %}"
+                                                    class="img-thumb wp-post-image" alt="">
+                                                {% endif %} </a>
                                         </figure>
 
 
