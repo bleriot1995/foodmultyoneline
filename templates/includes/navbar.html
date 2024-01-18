@@ -44,16 +44,13 @@
                                 href="{% url 'myAccount' %}">Dashboard</a>
 
                             <a class="cs-color cs-popup-joinus-btn login-popup rounded-xl p-1 bg-light  text-danger"
-                                href="{% url 'logout' %}">Logout</a>
-                            {% else %}
-                            <a class="cs-color cs-popup-joinus-btn login-popup rounded-xl p-1 bg-primary text-white"
-                                href="{% url 'login' %}">
-                                Login
-                            </a>
+                                href="{% url 'logout' %}">Logout</a> {% else %} <a
+                                class="cs-color cs-popup-joinus-btn login-popup rounded-xl p-1 bg-primary text-white"
+                                href="{% url 'login' %}">Login</a>
                             <a class="cs-color cs-popup-joinus-btn login-popup rounded-xl p-1 bg-primary text-white"
                                 href="{% url 'registerUser' %}">Register</a>
-                            <a class="get-start-btn" href=""> Register Restaurant </a>
-                            {% endif %}
+                            <a class="get-start-btn" href="{% url 'registerVendor' %}"> Register Restaurant </a>
+                            {%endif %}
                         </div>
                     </div>
                 </div>

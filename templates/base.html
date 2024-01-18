@@ -38,8 +38,13 @@
 </head>
 
 <body>
-  <!-- LOAD NAVBAR HERE --> {% include 'includes/navbar.html' %} <!-- LOAD CONTENT HERE  --> {% block content %}
-  <!-- MAIN CONTENT WILL BE HERE --> {% endblock %} <!-- LOAD FOOTER HERE --> {% include 'includes/footer.html' %}
+  <!-- LOAD NAVBAR HERE -->
+  {% include 'includes/navbar.html' %}
+  <!-- LOAD CONTENT HERE  -->
+  {% block content %}
+  <!-- MAIN CONTENT WILL BE HERE -->
+  {% endblock %} <!-- LOAD FOOTER HERE -->
+  {% include 'includes/footer.html' %}
 
   {% if '/' == request.path or 'profile' in request.path %}
   <script>

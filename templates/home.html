@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
-
 {% load static %}
-
 {% block content %}
 <!-- Main Section Start -->
 <div class="main-section">
@@ -121,13 +119,13 @@
                                     <div class="img-holder">
                                         <figure>
                                             <a href="{% url 'vendorDetail' vendor.vendor_slug %}">
-                                                {% if vendor.user_profile.profile_picture %}
-                                                <img src="{{ vendor.user_profile.profile_picture.url }}"
+                                                {% if vendor.user_profile.profile_picture %} <img
+                                                    src="{{ vendor.user_profile.profile_picture.url }}"
                                                     class="img-thumb wp-post-image" alt="">
-                                                {% else %}
-                                                <img src="{% static 'images/blank-profile-pic.jpg' %}"
+                                                {% else %} <img src="{% static 'images/blank-profile-pic.jpg' %}"
                                                     class="img-thumb wp-post-image" alt="">
-                                                {% endif %} </a>
+                                                {% endif %}
+                                            </a>
                                         </figure>
 
 
@@ -170,4 +168,5 @@
     <!-- Choose From Most Popular Listing End -->
     <!-- Home Pages Elements End  -->
 </div>
-<!-- Main Section End --> {% endblock %}
+<!-- Main Section End -->
+{% endblock %}
