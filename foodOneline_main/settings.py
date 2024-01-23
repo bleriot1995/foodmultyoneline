@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'accounts',
     'vendor',
     'crispy_forms',
+    'menu',
+    'marketplace',
 ]
 
 
@@ -70,6 +72,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'accounts.context_processors.get_vendor',
+                'accounts.context_processors.get_google_api',
             ],
         },
     },
@@ -160,3 +163,5 @@ DEFAULT_FROMA_EMAIL = "FoodOnline <bleriottiana1995@gmail.com>"
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+GOOGLE_API_KEY = 'AIzaSyC4yTudrg9pTcB2khAgrbCMBfVvbviOhVU'

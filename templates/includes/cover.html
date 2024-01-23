@@ -22,10 +22,8 @@
                             <span class="restaurant-title">{{vendor.vendor_name}}</span>
                             <div class="text">
                                 <i class="icon-location"></i>
-                                {% if vendor.user_profile.full_adress %}
+                                {% if vendor.user_profile.address %}
                                 <p>{{ vendor.user_profile.address}}</p>
-                                {% else %}
-                                <p>Address not available</p>
                                 {% endif %}
                             </div>
                         </div>
