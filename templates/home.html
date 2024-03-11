@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                     <div class="main-search fancy bg-holder">
-                        <form action="" method="GET">
+                        <form action="{% url 'search' %}" method="GET">
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12">
                                     <div class="field-holder">
@@ -90,12 +90,12 @@
                             <li class="has-border">
                                 <figure>
                                     {% if vendor.user_profile.profile_picture %}
-                                    <a href="">
+                                    <a href="{% url 'vendor_detail' vendor.vendor_slug %}">
                                         <img src="{{ vendor.user_profile.profile_picture.url }}"
                                             class="attachment-full size-full wp-post-image" alt="">
                                     </a>
                                     {% else %}
-                                    <a href="">
+                                    <a href="{% url 'vendor_detail' vendor.vendor_slug %}">
                                         <img src="{% static 'images/blank-profile-pic.jpg' %}"
                                             class="attachment-full size-full wp-post-image" alt="">
                                     </a>
@@ -128,7 +128,7 @@
                                 <div class="list-post featured">
                                     <div class="img-holder">
                                         <figure>
-                                            <a href="">
+                                            <a href="{% url 'vendor_detail' vendor.vendor_slug %}">
                                                 {% if vendor.user_profile.profile_picture %}
                                                 <img src="{{ vendor.user_profile.profile_picture.url }}"
                                                     class="img-thumb wp-post-image" alt="">
@@ -156,7 +156,7 @@
                                     <div class="text-holder">
                                         <div class="post-title">
                                             <h5>
-                                                <a href="">{{ vendor }}</a>
+                                                <a href="{% url 'vendor_detail' vendor.vendor_slug %}">{{ vendor }}</a>
                                             </h5>
                                         </div>
                                         <span>
