@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
   <!-- Google Font Family Link End -->
+
   <!-- CSS -->
   <link href="{% static 'css/iconmoon.css' %}" rel="stylesheet">
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -19,6 +20,12 @@
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
   <link href="{% static 'css/bootstrap-slider.css' %}" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+  {% if '/' == request.path or 'profile' in request.path %}
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_API_KEY}}&libraries=places&callback=initAutoComplete"
+    defer></script>
+  {% endif %}
 
   <!-- JAVASCRIPT -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
