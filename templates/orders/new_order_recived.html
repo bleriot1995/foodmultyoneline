@@ -1,0 +1,9 @@
+{% autoescape off %}
+
+You have received a new order.
+Your order number: {{ order.order_number }}
+Transaction ID: {{ order.payment.transaction_id }}
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+{% endautoescape %}

@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'menu',
     'marketplace',
+    'customers',
+    'orders',
 ]
 
 
@@ -75,6 +77,8 @@ TEMPLATES = [
                 'accounts.context_processors.get_google_api',
                 'marketplace.context_processors.get_cart_counter',
                 'marketplace.context_processors.get_cart_amounts',
+                'accounts.context_processors.get_user_profile',
+                'accounts.context_processors.get_paypal_cleint_id',
             ],
         },
     },
@@ -167,3 +171,7 @@ DEFAULT_FROMA_EMAIL = "FoodOnline <bleriottiana1995@gmail.com>"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 GOOGLE_API_KEY = 'AIzaSyC4yTudrg9pTcB2khAgrbCMBfVvbviOhVU'
+
+PAYPAL_CLIENT_ID = config('PAYPAL_CLIENT_ID')
+
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
